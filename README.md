@@ -1,7 +1,8 @@
 # Install Nvidia GPU drivers on Ubuntu
 This is a helper script to install Nvidia's GPU drivers on Ubuntu, supports
 AMD64 and ppc64el architechtures. This script was tested on ppc64el arch and
-works on 18.04 or newer Ubuntu releases.
+works on 18.04 or newer Ubuntu releases. *(Ubuntu 18.04/18.10 please ensure 
+you have the latest linux-firmware package installed for GPU support).*
 
 ## For usage:
 ```$ ./ubuntu-install-nvidia.sh -h | --help```
