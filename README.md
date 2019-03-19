@@ -1,7 +1,7 @@
 # Install Nvidia GPU drivers on Ubuntu
 This is a helper script to install Nvidia's GPU drivers on Ubuntu, supports
 AMD64 and ppc64el architechtures. This script was tested on ppc64el arch and
-works on 18.04 or newer Ubuntu releases. *(Ubuntu 18.04/18.10 please ensure 
+works on 18.04 or newer Ubuntu releases. *(Ubuntu 18.04/18.10 please make sure 
 you have the latest linux-firmware package installed for GPU support).*
 
 ## For usage:
@@ -10,8 +10,8 @@ you have the latest linux-firmware package installed for GPU support).*
 # Install drivers and cuda
 ```$ ./ubuntu-install-nvidia.sh ```
 This script will download the latest cuda repo and key published by Nvidia,
-set up the repository, and install the drivers, cuda libraries and tool.
-After installation is complete and system reboot, run nvidia-smi command
+set up the repository, and install the drivers, cuda, cudann libraries and tools.
+After the installation is complete, reboot the system, run nvidia-smi command
 to list the GPUs.
 
 ```
