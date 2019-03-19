@@ -70,7 +70,7 @@ If you get pip3 errors on installing the wheel, do the following:
  $ git clone https://github.com/pytorch/examples.git ~/pyt-examples
  $ cd ~/pyt-examples/word_language_model
 ```
- - Add the following to main.py as follows for parallel runs on GPU.
+ - Add the following to main.py for parallel runs on GPU.
 ```
   parser.add_argument("--local_rank", type=int)
 
@@ -85,3 +85,5 @@ If you get pip3 errors on installing the wheel, do the following:
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --tied
  $ python3 -m torch.distributed.launch --nproc_per_node=4 generate.py --cuda
 ```
+# Tensorflow on Power9
+At this time no prebuilt packages exists for users to easily get started with tensorflow on Power9. Building tensorflow from sources fail, and I have not been able to get it to build following the [recommended combinations](https://www.tensorflow.org/install/source#linux) of bazel and tensorflow.
