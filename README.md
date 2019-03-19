@@ -44,7 +44,7 @@ Mon Mar 18 19:21:09 2019
 +-----------------------------------------------------------------------------+
 ```
 
-# Install pytorch on ppc64el.
+# Install pytorch on Power9.
 pytorch is not packaged for ppc64el in Ubuntu, you will need to build it from
 source as follows:
 
