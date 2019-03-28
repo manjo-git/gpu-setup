@@ -70,7 +70,7 @@ host_arch=$(dpkg --print-architecture)
 case ${host_arch} in
     amd64) arch="x86_64" ;;
     ppc64el) arch=${host_arch} ;;
-    *) echo "FATAL: Unsopported architecture ${host_arch}" ;;
+    *) echo "FATAL: Unsopported architecture ${host_arch}" ; exit 1 ;;
 esac
 
 # Get host Ubuntu release version.
@@ -80,7 +80,7 @@ host_ver=$(lsb_release  -r | cut -d: -f2)
 if check_version "18.04" ${host_ver}; then
     echo "FATAL: Unsupported Ubuntu release"
     echo "Host Ubuntu release must be 18.04 or greater"
-    exit
+    exit 1
 fi
 
 # Check if we can reach Nvidia's cuda repos and ML repos.
