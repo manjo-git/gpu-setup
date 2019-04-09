@@ -84,6 +84,7 @@ If you get pip3 errors on installing the wheel, do the following:
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --epochs 6 --tied
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --tied
  $ python3 -m torch.distributed.launch --nproc_per_node=4 generate.py --cuda
+ $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --emsize 1500 --nhid 1500 --dropout 0.65 --epochs 40 --tied
 ```
 # Tensorflow on Power9
 At this time no prebuilt packages exists for users to easily get started with tensorflow on Power9. Building tensorflow from sources fail, and I have not been able to get it to build following the [recommended combinations](https://www.tensorflow.org/install/source#linux) of bazel and tensorflow.
