@@ -78,13 +78,13 @@ If you get pip3 errors on installing the wheel, do the following:
   torch.cuda.set_device(args.local_rank) 
 ```
  - Run the testcase as follows, and run ```$ watch nvidia-smi``` on a 
-   seperate terminal.
+   seperate terminal. Use either of the training command lines for the model, then run generate.py.
 ``` 
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --epochs 6
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --epochs 6 --tied
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --tied
- $ python3 -m torch.distributed.launch --nproc_per_node=4 generate.py --cuda
  $ python3 -m torch.distributed.launch --nproc_per_node=4 main.py --cuda --emsize 1500 --nhid 1500 --dropout 0.65 --epochs 40 --tied
+ $ python3 -m torch.distributed.launch --nproc_per_node=4 generate.py --cuda
 ```
 # Tensorflow on Power9
 At this time no prebuilt packages exists for users to easily get started with tensorflow on Power9. Building tensorflow from sources fail, and I have not been able to get it to build following the [recommended combinations](https://www.tensorflow.org/install/source#linux) of bazel and tensorflow.
