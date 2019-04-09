@@ -50,7 +50,7 @@ source as follows:
 
 ## Install pre-requisites
 ```
- $ sudo apt install python3-pip libffi-dev libssl-dev
+ $ sudo apt install python3-pip libffi-dev libssl-dev cmake
  $ pip3 install certifi cffi numpy setuptools wheel pip pyyaml Collecting certifi
 ```
 
